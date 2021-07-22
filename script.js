@@ -1,7 +1,7 @@
 const welcomeDiv = document.createElement('div');
 const tellMeDiv = document.createElement('div');
 welcomeDiv.innerText = 'Welcome To Nation Prediction!';
-tellMeDiv.innerText = 'Tell me your Name? I will tell about you!';
+tellMeDiv.innerText = 'Tell us your Name! We will tell about you!';
 
 const nameInput = document.createElement('input');
 nameInput.setAttribute('id', 'name');

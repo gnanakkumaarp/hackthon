@@ -42,7 +42,7 @@ function getData() {
         if (data.country.length == 3) {
           document.getElementById('result').innerHTML = `
       <div class="on-result">Hi ${data.name}, Greetings!</div> 
-      We pridicted that you are from one of countries below</div> 
+      We pridicted that you are from one of the countries below</div> 
       <div class="on-result">1. ${data.country[0].country_id} with the probablity of ${((data.country[0].probability).toFixed(5))}</div>
       <div class="on-result">2. ${data.country[1].country_id} with the probablity of ${((data.country[1].probability).toFixed(5))}</div>
       <div class="on-result">3. ${data.country[2].country_id} with the probablity of ${((data.country[2].probability).toFixed(5))}</div>`

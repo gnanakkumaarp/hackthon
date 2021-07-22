@@ -26,9 +26,12 @@ const result = document.createElement('div')
 result.setAttribute('id', 'result')
 result.setAttribute('class', 'on-result')
 
-document.body.append(welcomeDiv, tellMeDiv, myform, result);
+const footer = document.createElement('footer')
+footer.setAttribute('id', 'footer')
 
+footer.innerText = 'Courtesy: Nationalize.io An API for predicting nationality from a Name'
 
+document.body.append(welcomeDiv, tellMeDiv, myform, result, footer);
 
 function getData() {
   let query = document.getElementById('name').value;
@@ -42,7 +45,7 @@ function getData() {
         if (data.country.length == 3) {
           document.getElementById('result').innerHTML = `
       <div class="on-result">Hi ${data.name}, Greetings!</div> 
-      We pridicted that you are from one of the countries below</div> 
+      We pridicted that you are from one of countries below</div> 
       <div class="on-result">1. ${data.country[0].country_id} with the probablity of ${((data.country[0].probability).toFixed(5))}</div>
       <div class="on-result">2. ${data.country[1].country_id} with the probablity of ${((data.country[1].probability).toFixed(5))}</div>
       <div class="on-result">3. ${data.country[2].country_id} with the probablity of ${((data.country[2].probability).toFixed(5))}</div>`
@@ -60,7 +63,7 @@ function getData() {
         if (data.country.length == 3) {
           document.getElementById('result').innerHTML = `
         <div class="on-result">Hi ${data.name}, Greetings!</div> 
-        We pridicted that you are from one of the countries below</div> 
+        We pridicted that you are from one of countries below</div> 
         <div class="on-result">1. ${data.country[0].country_id} with the probablity of ${((data.country[0].probability).toFixed(5))}</div>
         <div class="on-result">2. ${data.country[1].country_id} with the probablity of ${((data.country[1].probability).toFixed(5))}</div>
         <div class="on-result">3. ${data.country[2].country_id} with the probablity of ${((data.country[2].probability).toFixed(5))}</div>`

@@ -35,3 +35,11 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.on-result{
+  color:aquamarine;
+}
+
+.no-result{
+  color: rosybrown;
+}
